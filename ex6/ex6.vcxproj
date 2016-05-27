@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1417C2B3-6A2E-4741-9F92-CC50ED01982D}</ProjectGuid>
+    <ProjectGuid>{1F0C3F23-0547-4858-A372-5A3DDB73E4BD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,16 +76,38 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ex_main.cc" />
-    <ClCompile Include="index\storage_reader.cc" />
-    <ClCompile Include="index\storage_writer.cc" />
+    <ClCompile Include="scorer\conjunction_scorer.cc" />
+    <ClCompile Include="scorer\disjunction_scorer.cc" />
+    <ClCompile Include="scorer\req_excl_scorer.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h" />
+    <ClInclude Include="analysis\token.h" />
+    <ClInclude Include="analysis\token_stream.h" />
+    <ClInclude Include="index\document.h" />
+    <ClInclude Include="index\index_searcher.h" />
+    <ClInclude Include="index\index_writer.h" />
+    <ClInclude Include="index\inverted_index_searcher.h" />
+    <ClInclude Include="index\inverted_index_writer.h" />
+    <ClInclude Include="index\posting.h" />
+    <ClInclude Include="index\score_doc.h" />
     <ClInclude Include="index\storage_reader.h" />
     <ClInclude Include="index\storage_writer.h" />
+    <ClInclude Include="query\conjunction_query.h" />
+    <ClInclude Include="query\disjunction_query.h" />
+    <ClInclude Include="query\query.h" />
+    <ClInclude Include="query\req_excl_query.h" />
+    <ClInclude Include="query\term_query.h" />
+    <ClInclude Include="scorer\conjunction_scorer.h" />
+    <ClInclude Include="scorer\disjunction_scorer.h" />
+    <ClInclude Include="scorer\req_excl_scorer.h" />
+    <ClInclude Include="scorer\scorer.h" />
+    <ClInclude Include="scorer\term_scorer.h" />
     <ClInclude Include="util\file_io.h" />
     <ClInclude Include="util\io.h" />
     <ClInclude Include="util\logging.h" />
     <ClInclude Include="util\mem_io.h" />
+    <ClInclude Include="util\util.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="se.lib" />

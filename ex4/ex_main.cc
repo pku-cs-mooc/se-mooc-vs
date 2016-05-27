@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
   search::MockStorageReader reader(&mem_io);
   search::TermScorer scorer(data.size(), in, 0, &reader);
 
-  while (scorer.Next() < search::Scorer::kDocExhausted) {
+  while (scorer.Next() < Scorer::kDocExhausted) {
     LOG(INFO) << "doc: " << scorer.doc() << ", score: " << scorer.score();
   }
 

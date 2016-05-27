@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\analysis">
+      <UniqueIdentifier>{590b17a7-3e4e-4aca-935c-005daa21ad09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\scorer">
+      <UniqueIdentifier>{7093cd9a-022d-4b6a-bbd0-70e0c44bb54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\index">
+      <UniqueIdentifier>{bf66df2a-f875-40fd-8400-7861a6e9a2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{e82477ef-eec3-4c4c-a3eb-062250abfd02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\query">
+      <UniqueIdentifier>{34c07b78-260e-4e4a-8662-05db7a7ab9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scorer">
+      <UniqueIdentifier>{3562fdd5-6c45-44de-8c48-5f99cc204615}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ex_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scorer\conjunction_scorer.cc">
+      <Filter>Source Files\scorer</Filter>
+    </ClCompile>
+    <ClCompile Include="scorer\disjunction_scorer.cc">
+      <Filter>Source Files\scorer</Filter>
+    </ClCompile>
+    <ClCompile Include="scorer\req_excl_scorer.cc">
+      <Filter>Source Files\scorer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token_stream.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="index\document.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\index_searcher.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\index_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_searcher.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\posting.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\score_doc.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\storage_reader.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\storage_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="query\conjunction_query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\disjunction_query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\req_excl_query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\term_query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\conjunction_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\disjunction_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\req_excl_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\term_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="util\file_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logging.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mem_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="se.lib" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\analysis">
+      <UniqueIdentifier>{dd5f2cab-b993-4a5e-9c7f-47b9b95d5e82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\index">
+      <UniqueIdentifier>{2b95f47c-0880-4bf1-a1a3-fb106988de88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\query">
+      <UniqueIdentifier>{662d61bd-a6a9-4203-aadc-d41d00a1dbad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\scorer">
+      <UniqueIdentifier>{c19144ee-a03e-45e5-bd09-98edd2d717ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{8e111a2f-071c-418f-9b9a-068b140d066e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\index">
+      <UniqueIdentifier>{d856bb2b-e241-496b-99f6-fb01219696d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ex_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="index\index_searcher.cc">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="index\index_writer.cc">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="index\inverted_index_searcher.cc">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token_stream.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="index\document.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\index_searcher.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\index_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_searcher.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\posting.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\score_doc.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\storage_reader.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\storage_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="query\query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\term_query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\term_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="util\file_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logging.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mem_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="se.lib" />
+  </ItemGroup>
+</Project>

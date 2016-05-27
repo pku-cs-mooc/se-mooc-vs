@@ -33,20 +33,11 @@ namespace search {
 		// Number of documents.
 		virtual int num_docs() const {
 			// TODO: Implement this function.
-			std::streampos initialPosition = indexReader->tellg();
-			indexReader->seekg(0, indexReader->end);
-			std::streampos length = indexReader->tellg();
-			indexReader->seekg(initialPosition, indexReader->beg);
-			return length / sizeof(int);
+			return 0;
 		}
 
 	private:
 		// TODO: Add members you need.
-		util::IO* io;
-		std::istream* indexReader;
-		std::istream* storageReader;
-
-		int getIndex(int doc);
 	};
 
 }  // namespace search

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1417C2B3-6A2E-4741-9F92-CC50ED01982D}</ProjectGuid>
+    <ProjectGuid>{3941910C-BFD6-47E5-B7B7-F530BDC38366}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,17 +75,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="analysis\text_token_stream.cc" />
     <ClCompile Include="ex_main.cc" />
-    <ClCompile Include="index\storage_reader.cc" />
-    <ClCompile Include="index\storage_writer.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="index\storage_reader.h" />
-    <ClInclude Include="index\storage_writer.h" />
-    <ClInclude Include="util\file_io.h" />
-    <ClInclude Include="util\io.h" />
+    <ClInclude Include="analysis\analyzer.h" />
+    <ClInclude Include="analysis\text_token_stream.h" />
+    <ClInclude Include="analysis\token.h" />
+    <ClInclude Include="analysis\token_stream.h" />
     <ClInclude Include="util\logging.h" />
-    <ClInclude Include="util\mem_io.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="se.lib" />

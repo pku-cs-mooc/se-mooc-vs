@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1417C2B3-6A2E-4741-9F92-CC50ED01982D}</ProjectGuid>
+    <ProjectGuid>{150BB5F4-4EED-4FA5-830D-64340D129C78}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,13 +75,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ex_main.cc" />
-    <ClCompile Include="index\storage_reader.cc" />
-    <ClCompile Include="index\storage_writer.cc" />
+    <ClCompile Include="analysis\query_token_stream.cc" />
+    <ClCompile Include="query\query_parser.cc" />
+    <ClCompile Include="se_main.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h" />
+    <ClInclude Include="analysis\query_token_stream.h" />
+    <ClInclude Include="analysis\token.h" />
+    <ClInclude Include="analysis\token_stream.h" />
+    <ClInclude Include="index\inverted_index_searcher.h" />
     <ClInclude Include="index\storage_reader.h" />
-    <ClInclude Include="index\storage_writer.h" />
+    <ClInclude Include="query\query.h" />
+    <ClInclude Include="query\query_manager.h" />
+    <ClInclude Include="query\query_parser.h" />
+    <ClInclude Include="scorer\scorer.h" />
+    <ClInclude Include="scorer\term_scorer.h" />
     <ClInclude Include="util\file_io.h" />
     <ClInclude Include="util\io.h" />
     <ClInclude Include="util\logging.h" />

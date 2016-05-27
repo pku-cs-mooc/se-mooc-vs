@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\analysis">
+      <UniqueIdentifier>{d7d9bb05-6e94-493d-96f1-b38a7b76ad49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\scorer">
+      <UniqueIdentifier>{f52d19ef-3d65-4ea7-b5d8-a69c54ab4700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{5dc58aaf-1288-4d20-ba5e-4544845edc7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\query">
+      <UniqueIdentifier>{13ffe011-defd-4956-9624-6ee3b309bc5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\index">
+      <UniqueIdentifier>{ccba73ab-bbc0-4f58-a41e-ea4e1606145a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\query">
+      <UniqueIdentifier>{0351d277-4993-4ad1-96eb-792bbcfc5b3c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="se_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="query\query_parser.cc">
+      <Filter>Source Files\query</Filter>
+    </ClCompile>
+    <ClCompile Include="analysis\query_token_stream.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\query_token_stream.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token_stream.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_searcher.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\storage_reader.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="query\query.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\query_manager.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="query\query_parser.h">
+      <Filter>Header Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="scorer\term_scorer.h">
+      <Filter>Header Files\scorer</Filter>
+    </ClInclude>
+    <ClInclude Include="util\file_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logging.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mem_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="se.lib" />
+  </ItemGroup>
+</Project>

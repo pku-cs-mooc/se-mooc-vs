@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1417C2B3-6A2E-4741-9F92-CC50ED01982D}</ProjectGuid>
+    <ProjectGuid>{83A7AA1D-FA5A-4B3F-9FF2-71509E038D1F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,12 +76,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ex_main.cc" />
-    <ClCompile Include="index\storage_reader.cc" />
-    <ClCompile Include="index\storage_writer.cc" />
+    <ClCompile Include="scorer\term_scorer.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="index\posting.h" />
     <ClInclude Include="index\storage_reader.h" />
-    <ClInclude Include="index\storage_writer.h" />
+    <ClInclude Include="scorer\scorer.h" />
+    <ClInclude Include="scorer\term_scorer.h" />
     <ClInclude Include="util\file_io.h" />
     <ClInclude Include="util\io.h" />
     <ClInclude Include="util\logging.h" />

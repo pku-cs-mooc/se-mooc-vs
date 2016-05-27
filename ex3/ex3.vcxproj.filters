@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\analysis">
+      <UniqueIdentifier>{f57cadb1-4017-40cb-9081-573ff9605f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\index">
+      <UniqueIdentifier>{b443e1bf-d2a3-481e-8702-f0e60a0822d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{38273e98-5065-415c-988a-115910a12c01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\index">
+      <UniqueIdentifier>{8b91d5bf-c4d2-403f-8901-c3839f302f3c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ex_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="index\document.cc">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="index\inverted_index_writer.cc">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis\analyzer.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\token_stream.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="index\document.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\inverted_index_writer.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="index\posting.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="util\file_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logging.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mem_io.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="se.lib" />
+  </ItemGroup>
+</Project>

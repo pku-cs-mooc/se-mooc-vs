@@ -16,10 +16,6 @@ namespace search {
 		// - io manages ostreams, and should keep alive in this class.
 		StorageWriter(util::IO* io) {
 			// TODO: Implement constructor.
-			this->io = io;
-			this->storageWriter = io->NewStorageOut();
-			this->indexWriter = io->NewStorageIndexOut();
-			this->index = storageWriter->tellp();
 		}
 
 		// Closes and deletes ostreams.
@@ -36,10 +32,6 @@ namespace search {
 
 	private:
 		// TODO: Add member you need.
-		util::IO* io;
-		std::ostream* storageWriter;
-		std::ostream* indexWriter;
-		int index;
 	};
 
 }  // namespace search

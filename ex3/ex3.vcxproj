@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1417C2B3-6A2E-4741-9F92-CC50ED01982D}</ProjectGuid>
+    <ProjectGuid>{C4C2BD0B-26D4-4EAA-91D8-F7590F74B64D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,16 +76,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ex_main.cc" />
-    <ClCompile Include="index\storage_reader.cc" />
-    <ClCompile Include="index\storage_writer.cc" />
+    <ClCompile Include="index\document.cc" />
+    <ClCompile Include="index\inverted_index_writer.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="index\storage_reader.h" />
-    <ClInclude Include="index\storage_writer.h" />
+    <ClInclude Include="analysis\analyzer.h" />
+    <ClInclude Include="analysis\token.h" />
+    <ClInclude Include="analysis\token_stream.h" />
+    <ClInclude Include="index\document.h" />
+    <ClInclude Include="index\inverted_index_writer.h" />
+    <ClInclude Include="index\posting.h" />
     <ClInclude Include="util\file_io.h" />
     <ClInclude Include="util\io.h" />
     <ClInclude Include="util\logging.h" />
     <ClInclude Include="util\mem_io.h" />
+    <ClInclude Include="util\util.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="se.lib" />
