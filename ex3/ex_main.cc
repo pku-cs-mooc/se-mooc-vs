@@ -21,5 +21,23 @@ int main(int argc, char** argv) {
     writer.AddDocument(&doc);
   }
   LOG(INFO) << "Inverted index:" << std::endl << writer.DebugString();
+
+  writer.WriteAndClose();
+
+  auto termIn = mem_io.NewTermIn(0);
+  int postingSize = mem_io.kTermSize + sizeof(int) + sizeof(int);
+  char *buffer = new char[postingSize];
+  LOG(INFO) << "\tTERM\tPOSTING_LIST_POSITION\tdf";
+  while (termIn->good()) {
+    if (termIn->read(buffer, mem_io.kTermSize)) {
+      buffer[mem_io.kTermSize] = '\0';
+      std::string term(buffer);
+      termIn->read(buffer, sizeof(int));
+      int plp = *(int*)buffer;
+      termIn->read(buffer, sizeof(int));
+      int df = *(int*)buffer;
+      LOG(INFO) << '\t' << term << "\t\t" << plp << "\t\t" << df;
+    }
+  }
   return 0;
 }
