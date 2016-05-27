@@ -13,15 +13,15 @@ xcopy /E /Y %srcpath%\query %targetpath%\query
 xcopy /E /Y %srcpath%\scorer %targetpath%\scorer
 xcopy /E /Y %srcpath%\util %targetpath%\util
 cd SEH\%1
-..\..\7z.exe a -ttar ..\..\%1.output.tar analysis
-..\..\7z.exe a -ttar ..\..\%1.output.tar index
-..\..\7z.exe a -ttar ..\..\%1.output.tar query
-..\..\7z.exe a -ttar ..\..\%1.output.tar scorer
-..\..\7z.exe a -ttar ..\..\%1.output.tar util
+..\..\7z.exe a -ttar ..\..\%1.tar analysis
+..\..\7z.exe a -ttar ..\..\%1.tar index
+..\..\7z.exe a -ttar ..\..\%1.tar query
+..\..\7z.exe a -ttar ..\..\%1.tar scorer
+..\..\7z.exe a -ttar ..\..\%1.tar util
 cd ..\..
 rmdir SEH /s /q
-7z.exe a -tgzip %1.output.tar.gz %1.output.tar
-del %1.output.tar
+7z.exe a -tgzip %1.output.tar.gz %1.tar
+del %1.tar
 move %1.output.tar.gz ..\%1.tar.gz
 cscript MessageBox.vbs "%1.tar.gz has been created!"
 cd ..
