@@ -130,6 +130,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <Library Include="sed.lib" />
     <Library Include="se.lib" />
   </ItemGroup>
 </Project>

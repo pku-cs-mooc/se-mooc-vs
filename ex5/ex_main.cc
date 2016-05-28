@@ -50,11 +50,22 @@ void Search(const Query& query, IndexSearcher* searcher) {
 
 int main(int argc, char** argv) {
   std::string base_path = search::util::BasePath(argv[0]);
+
+#ifdef _WIN32
+  base_path[base_path.length() - 1] = '\0';
+  base_path = search::util::BasePath(base_path);
+  std::string testdata_path = base_path;
+  std::string index_path = base_path + "bin\\index\\";
+  std::string cmd = "if exist \"" + index_path + "\" rmdir /Q /S \"" + index_path + "\"";
+  search::util::System(cmd);
+  search::util::System("mkdir \"" + index_path + "\"");
+#else
   std::string testdata_path = base_path;
   std::string index_path = base_path + "bin/index/";
 
   search::util::System("rm -rf " + index_path);
   search::util::System("mkdir -p " + index_path);
+#endif
 
   search::Index(testdata_path, index_path);
 

@@ -85,8 +85,9 @@
     <ClInclude Include="analysis\token_stream.h" />
     <ClInclude Include="util\logging.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Library Include="se.lib" />
+  <ItemGroup >
+    <Library Include="sed.lib" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"/>
+    <Library Include="se.lib" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

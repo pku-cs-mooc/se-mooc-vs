@@ -7,6 +7,13 @@
 
 #include "util/io.h"
 
+#ifdef _WIN32
+#define pathDeli '\\'
+#else
+#define pathDeli '/'
+#endif
+
+
 namespace search {
 namespace util {
 
@@ -17,10 +24,10 @@ class FileIO : public IO {
       : FileIO(root_path, IO::kDefaultTermSize) {}
 
   FileIO(const std::string& root_path, int term_size) : IO(term_size) {
-    if (root_path.empty() || root_path.back() == '/') {
+    if (root_path.empty() || root_path.back() == pathDeli) {
       root_path_ = root_path;
     } else {
-      root_path_ = root_path + "/";
+      root_path_ = root_path + pathDeli;
     }
   }
 
