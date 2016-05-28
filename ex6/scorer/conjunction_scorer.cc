@@ -32,6 +32,7 @@ ConjunctionScorer::~ConjunctionScorer() {
 
 int ConjunctionScorer::Next() {
   // TODO: Implement this function.
+  doc_ = kDocExhausted;
   return kDocExhausted;
 }
 

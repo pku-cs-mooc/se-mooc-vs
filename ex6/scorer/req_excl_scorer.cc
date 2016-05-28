@@ -14,6 +14,7 @@ ReqExclScorer::~ReqExclScorer() {
 
 int ReqExclScorer::Next() {
   // TODO: Implement this function.
+  doc_ = kDocExhausted;
   return kDocExhausted;
 }
 

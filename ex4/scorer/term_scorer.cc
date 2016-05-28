@@ -13,6 +13,7 @@ TermScorer::TermScorer(int df, std::istream* in, int begin,
 
 int TermScorer::Next() {
   // TODO: Implement this function.
+  doc_ = kDocExhausted;
   return kDocExhausted;
 }
 

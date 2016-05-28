@@ -31,6 +31,7 @@ DisjunctionScorer::~DisjunctionScorer() {
 
 int DisjunctionScorer::Next() {
   // TODO: Implement this function.
+  doc_ = kDocExhausted;
   return kDocExhausted;
 }
 
