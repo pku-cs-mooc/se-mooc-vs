@@ -18,7 +18,9 @@ bool TextTokenStream::HasNext() const {
 
 Token TextTokenStream::Next() {
   // TODO: Implement this function.
-  return Token("", 0, 0);
+  std::string term;
+  Normalize(&term);
+  return Token(term, 0, 0);
 }
 
 }  // namespace search
