@@ -31,6 +31,9 @@
     <Filter Include="Source Files\query">
       <UniqueIdentifier>{0351d277-4993-4ad1-96eb-792bbcfc5b3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\analysis">
+      <UniqueIdentifier>{d9b46e19-f93c-4ebb-a356-76cb34418e0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="se_main.cc">
@@ -40,7 +43,7 @@
       <Filter>Source Files\query</Filter>
     </ClCompile>
     <ClCompile Include="analysis\query_token_stream.cc">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\analysis</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +94,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="se.lib" />
+    <Library Include="sed.lib" />
   </ItemGroup>
 </Project>
