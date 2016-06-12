@@ -36,14 +36,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="se_main.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="query\query_parser.cc">
       <Filter>Source Files\query</Filter>
     </ClCompile>
     <ClCompile Include="analysis\query_token_stream.cc">
       <Filter>Source Files\analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ex_main.cc">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

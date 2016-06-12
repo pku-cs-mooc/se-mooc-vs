@@ -1,3 +1,8 @@
+// The binary of this file is run by ./ex_main
+//
+// It builds index for all .cc and .h files under this directory. After index is
+// built, it searches files with some composited queries.
+
 #include <fstream>
 #include <string>
 #include <vector>

@@ -1,3 +1,8 @@
+// The binary of this file can be run by ./ex_main
+//
+// It builds index for all .cc and .h files under this directory. After index is
+// built, it searches files which contain the term "scoredoc".
+
 #include <fstream>
 #include <string>
 #include <vector>

@@ -1,3 +1,10 @@
+// The binary of this file can be run by ./ex_main
+//
+// It builds inverted index for `data`, and outputs human-readable inverted
+// index twice:
+// * The first one is the in-memory inverted index.
+// * The second one is the on-disk inverted index.
+
 #include <string>
 #include <vector>
 

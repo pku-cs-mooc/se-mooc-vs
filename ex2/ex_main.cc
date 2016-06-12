@@ -1,3 +1,8 @@
+// Ths binary of this file can be run by ./ex_main.
+//
+// It stores `data` into storage by writer and reads `data` from storage by
+// reader.
+
 #include <string>
 #include <vector>
 

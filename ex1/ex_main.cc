@@ -1,3 +1,13 @@
+// The binary of this file can be run by 2 ways:
+//
+// 1. ./ex_main "This is content to be tokenized."
+//    In this way, this binary will output all tokens of the string
+//    sequentially.
+//
+// 2. ./ex_main
+//    In this way, this binary will output all tokens of the content read from
+//    std::cin sequentially.
+
 #include <sstream>
 #include <string>
 

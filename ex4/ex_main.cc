@@ -1,3 +1,8 @@
+// The binary of this file can be run by ./ex_main
+//
+// It first writes postings sequencially, and then iterates on them by
+// TermScorer.
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -32,7 +37,7 @@ int main(int argc, char** argv) {
   for (const search::Posting& posting : data) {
     posting.Write(out);
   }
-  mem_io.ClosePostingOut(out);
+  mem_io.CloseAndDeletePostingOut(out);
   delete out;
 
   std::istream* in = mem_io.NewPostingIn(0);
@@ -43,7 +48,7 @@ int main(int argc, char** argv) {
     LOG(INFO) << "doc: " << scorer.doc() << ", score: " << scorer.score();
   }
 
-  mem_io.ClosePostingIn(in);
+  mem_io.CloseAndDeletePostingIn(in);
   delete in;
 
   return 0;
