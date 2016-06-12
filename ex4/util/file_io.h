@@ -7,6 +7,13 @@
 
 #include "util/io.h"
 
+#ifdef _WIN32
+#define pathDeli '\\'
+#else
+#define pathDeli '/'
+#endif
+
+
 namespace search {
 namespace util {
 
@@ -17,10 +24,10 @@ class FileIO : public IO {
       : FileIO(root_path, IO::kDefaultTermSize) {}
 
   FileIO(const std::string& root_path, int term_size) : IO(term_size) {
-    if (root_path.empty() || root_path.back() == '/') {
+    if (root_path.empty() || root_path.back() == pathDeli) {
       root_path_ = root_path;
     } else {
-      root_path_ = root_path + "/";
+      root_path_ = root_path + pathDeli;
     }
   }
 
@@ -30,13 +37,17 @@ class FileIO : public IO {
                           : nullptr;
   }
 
-  void CloseTermIn(std::istream* in) const override { CloseIn(in); }
+  void CloseAndDeleteTermIn(std::istream* in) const override {
+    CloseAndDeleteIn(in);
+  }
 
   std::ostream* NewTermOut(int id) const override {
     return new std::ofstream(GetTermPath(id), std::ios::binary);
   }
 
-  void CloseTermOut(std::ostream* out) override { CloseOut(out); }
+   void CloseAndDeleteTermOut(std::ostream* out) override {
+    CloseAndDeleteOut(out);
+  }
 
   // Posting.
   std::istream* NewPostingIn(int id) const override {
@@ -45,39 +56,52 @@ class FileIO : public IO {
                : nullptr;
   }
 
-  void ClosePostingIn(std::istream* in) const override { CloseIn(in); }
+  void CloseAndDeletePostingIn(std::istream* in) const override {
+    CloseAndDeleteIn(in);
+  }
 
   std::ostream* NewPostingOut(int id) const override {
     return new std::ofstream(GetPostingPath(id), std::ios::binary);
   }
 
-  void ClosePostingOut(std::ostream* out) override { CloseOut(out); }
+  void CloseAndDeletePostingOut(std::ostream* out) override {
+    CloseAndDeleteOut(out);
+  }
+
 
   // Storage Index.
   std::istream* NewStorageIndexIn() const override {
     return new std::ifstream(GetStorageIndexPath(), std::ios::binary);
   }
 
-  void CloseStorageIndexIn(std::istream* in) const override { CloseIn(in); }
+   void CloseAndDeleteStorageIndexIn(std::istream* in) const override {
+    CloseAndDeleteIn(in);
+  }
 
   std::ostream* NewStorageIndexOut() const override {
     return new std::ofstream(GetStorageIndexPath(), std::ios::binary);
   }
 
-  void CloseStorageIndexOut(std::ostream* out) override { CloseOut(out); }
+  void CloseAndDeleteStorageIndexOut(std::ostream* out) override {
+    CloseAndDeleteOut(out);
+  }
 
   // Storage.
   std::istream* NewStorageIn() const override {
     return new std::ifstream(GetStoragePath(), std::ios::binary);
   }
 
-  void CloseStorageIn(std::istream* in) const override { CloseIn(in); }
+  void CloseAndDeleteStorageIn(std::istream* in) const override {
+    CloseAndDeleteIn(in);
+  }
 
   std::ostream* NewStorageOut() const override {
     return new std::ofstream(GetStoragePath(), std::ios::binary);
   }
 
-  void CloseStorageOut(std::ostream* out) override { CloseOut(out); }
+  void CloseAndDeleteStorageOut(std::ostream* out) override {
+    CloseAndDeleteOut(out);
+  }
 
   bool HasIdForIn(int id) const override {
     return std::ifstream(GetTermPath(id), std::ios::binary) &&
@@ -100,16 +124,18 @@ class FileIO : public IO {
   std::string GetStoragePath() const { return root_path_ + "storage.content"; }
 
  private:
-  void CloseIn(std::istream* in) const {
+  void CloseAndDeleteIn(std::istream* in) const {
     if (std::ifstream* fin = dynamic_cast<std::ifstream*>(in)) {
       fin->close();
     }
+    delete in;
   }
 
-  void CloseOut(std::ostream* out) const {
+  void CloseAndDeleteOut(std::ostream* out) const {
     if (std::ofstream* fout = dynamic_cast<std::ofstream*>(out)) {
       fout->close();
     }
+    delete out;
   }
 
  private:

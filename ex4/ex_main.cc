@@ -38,7 +38,6 @@ int main(int argc, char** argv) {
     posting.Write(out);
   }
   mem_io.CloseAndDeletePostingOut(out);
-  delete out;
 
   std::istream* in = mem_io.NewPostingIn(0);
   search::MockStorageReader reader(&mem_io);
@@ -49,7 +48,6 @@ int main(int argc, char** argv) {
   }
 
   mem_io.CloseAndDeletePostingIn(in);
-  delete in;
 
   return 0;
 }

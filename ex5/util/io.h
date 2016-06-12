@@ -16,24 +16,24 @@ class IO {
   virtual ~IO() = default;
 
   virtual std::istream* NewTermIn(int id) const = 0;
-  virtual void CloseTermIn(std::istream* in) const = 0;
+  virtual void CloseAndDeleteTermIn(std::istream* in) const = 0;
   virtual std::ostream* NewTermOut(int id) const = 0;
-  virtual void CloseTermOut(std::ostream* out) = 0;
+  virtual void CloseAndDeleteTermOut(std::ostream* out) = 0;
 
   virtual std::istream* NewPostingIn(int id) const = 0;
-  virtual void ClosePostingIn(std::istream* in) const = 0;
+  virtual void CloseAndDeletePostingIn(std::istream* in) const = 0;
   virtual std::ostream* NewPostingOut(int id) const = 0;
-  virtual void ClosePostingOut(std::ostream* out) = 0;
+  virtual void CloseAndDeletePostingOut(std::ostream* out) = 0;
 
   virtual std::istream* NewStorageIndexIn() const = 0;
-  virtual void CloseStorageIndexIn(std::istream* in) const = 0;
+  virtual void CloseAndDeleteStorageIndexIn(std::istream* in) const = 0;
   virtual std::ostream* NewStorageIndexOut() const = 0;
-  virtual void CloseStorageIndexOut(std::ostream* out) = 0;
+  virtual void CloseAndDeleteStorageIndexOut(std::ostream* out) = 0;
 
   virtual std::istream* NewStorageIn() const = 0;
-  virtual void CloseStorageIn(std::istream* in) const = 0;
+  virtual void CloseAndDeleteStorageIn(std::istream* in) const = 0;
   virtual std::ostream* NewStorageOut() const = 0;
-  virtual void CloseStorageOut(std::ostream* out) = 0;
+  virtual void CloseAndDeleteStorageOut(std::ostream* out) = 0;
 
   virtual bool HasIdForIn(int id) const = 0;
 
