@@ -11,6 +11,7 @@ namespace search {
 
 InvertedIndexWriter::~InvertedIndexWriter() {
   // TODO: Implement destructor.
+  WriteAndClose();
 }
 
 void InvertedIndexWriter::AddDocument(Document* doc) {
