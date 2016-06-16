@@ -15,7 +15,7 @@
 #include "util/mem_io.h"
 
 int main(int argc, char** argv) {
-  std::vector<std::string> data = {"1 2 3 4", "2 3 ", "3,4"};
+  std::vector<std::string> data = { "1 2 3 4", "2 3 ", "3,4" };
 
   search::Analyzer analyzer;
   search::util::MemIO mem_io;
@@ -32,6 +32,7 @@ int main(int argc, char** argv) {
   writer.WriteAndClose();
 
   auto termIn = mem_io.NewTermIn(0);
+  auto postingIn = mem_io.NewPostingIn(0);
   int postingSize = mem_io.kTermSize + sizeof(int) + sizeof(int);
   char *buffer = new char[postingSize];
   LOG(INFO) << "\tTERM\tPOSTING_LIST_POSITION\tdf";
@@ -44,7 +45,19 @@ int main(int argc, char** argv) {
       termIn->read(buffer, sizeof(int));
       int df = *(int*)buffer;
       LOG(INFO) << '\t' << term << "\t\t" << plp << "\t\t" << df;
+      postingIn->seekg(plp);
+      std::ostringstream debugString;
+      for (int i = 0; i < df; i++) {
+        postingIn->read(buffer, sizeof(int));
+        int docId = *(int*)buffer;
+        postingIn->read(buffer, sizeof(int));
+        int tf = *(int*)buffer;
+        debugString << '<' << docId << ',' << tf << '>' << ' ';
+      }
+      LOG(INFO) << debugString.str();
     }
   }
+  mem_io.CloseAndDeletePostingIn(postingIn);
+  mem_io.CloseAndDeleteTermIn(termIn);
   return 0;
 }

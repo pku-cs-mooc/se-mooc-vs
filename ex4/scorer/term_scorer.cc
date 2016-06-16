@@ -10,7 +10,6 @@ TermScorer::TermScorer(int df, std::istream* in, int begin,
                        StorageReader* storage_reader) {
   if (in == nullptr || storage_reader == nullptr) {
     // Mark this scorer as exhausted
-    doc_ = kDocExhausted;
   } else {
     // TODO: Implement constructor.
   }

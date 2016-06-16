@@ -17,7 +17,8 @@ class TermScorer : public Scorer {
   // - in is an stream contains this term's posting list.
   // - begin is the beginning offset of the posting list in 'in'.
   // - storage_reader provides interface to access some storage data that help
-  //   scoring. If it is null, every score will be set as 0.
+  //   scoring. If it is null, every score will be set as 0. Next() will
+  //   return kDocExhausted.
   //
   // in and storage_reader should keep alive in this class.
   TermScorer(int df, std::istream* in, int begin,
